@@ -44,10 +44,10 @@ contratos no último ano.
  
  ## Medidas [Formulas]
  
- ### Market Share
- Faturamento = SUM('Market Share'[Faturamento])
- Faturamento 2º Colocada = SUM('Market Share'[Faturamento_2_Colocada])
- Variação Faturamento = DIVIDE([Faturamento 2º Colocada], [Faturamento]) - 1
+### Market Share
+Faturamento = SUM('Market Share'[Faturamento])
+Faturamento 2º Colocada = SUM('Market Share'[Faturamento_2_Colocada])
+Variação Faturamento = DIVIDE([Faturamento 2º Colocada], [Faturamento]) - 1
  
  ### Lucratividade
  Lucro Liquido = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "Lucro Liquido")
