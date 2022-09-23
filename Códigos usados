@@ -1,0 +1,32 @@
+Quota de mercado
+Faturamento = SUM('Market Share'[Faturamento]) 
+Faturamento 2º Colocada = SUM('Market Share'[Faturamento_2_Colocada]) Variação Faturamento = DIVIDE([Faturamento 2º Colocada], [Faturamento]) - 1
+
+Lucratividade
+Lucro Liquido = CALCULATE(SOMA(Indicadores[Valor]), Indicadores[Indicador] = "Lucro Liquido") Receita Total = CALCULATE(SOMA(Indicadores[Valor]), Indicadores[Indicador] = "Receita Total")
+Lucratividade = DIVIDE( [Lucro Liquido], [Receita Total])
+
+Taxa de Churn
+
+Clientes Ativos = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "Clientes Ativos")
+Clientes Cancelados = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "Clientes Cancelados")
+Churn Rate = DIVIDE ([Clientes Cancelados],[Clientes Ativos])
+
+Faturamento Geral
+
+Media Admissoes e Demissoes = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "Media Admissoes e Demissoes")
+Colaboradores Ativos = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "Colaboradores Ativos")
+Turnover Geral = DIVIDE([Media Admissoes e Demissoes], [Colaboradores Ativos])
+
+NPS
+
+NPS - Total Clientes Responderam = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "NPS - Total Clientes Responderam")
+NPS - Total Clientes Promotores = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "NPS - Total Clientes Promotores")
+NPS - Total Clientes Detratores = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "NPS - Total Clientes Detratores")
+NPS = (DIVIDE([NPS - Total Clientes Promotores], [NPS - Total Clientes Responderam]) - DIVIDE([NPS - Total Clientes Detratores], [NPS - Total Clientes Responderam])) * 100
+
+CSAT
+
+CSAT - Total Clientes Responderam = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "CSAT - Total Clientes Responderam")
+CSAT - Total Clientes Satisfeitos = CALCULATE(SUM(Indicadores[Valor]), Indicadores[Indicador] = "CSAT - Total Clientes Satisfeitos")
+CSAT = DIVIDE([CSAT - Total Clientes Satisfeitos], [CSAT - Total Clientes Responderam])
