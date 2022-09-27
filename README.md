@@ -11,7 +11,6 @@ contratos no último ano.
 ## 🎯 Objetivos do Dashboard
 
 ► Analisar os Indicadores por Região e por Período (últimos 2 anos)
-
 ► Analisar os seguintes KPI´s:
     
   ### Market Share:
